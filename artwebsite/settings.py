@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # Apps
-    'images_and_videos.apps.ImagesAndVideosConfig',
+    'projects.apps.ProjectsConfig',
 
     # External packages
     'rest_framework',

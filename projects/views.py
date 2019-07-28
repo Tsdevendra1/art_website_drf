@@ -5,4 +5,4 @@ from django.views.generic import TemplateView
 
 
 class BaseTemplateView(TemplateView):
-    template_name = 'images_and_videos/base.html'
+    template_name = 'projects/base.html'
