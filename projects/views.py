@@ -21,10 +21,9 @@ class ProjectModelViewset(viewsets.ModelViewSet):
     queryset = Project.objects.all()
 
 
-class ImageModelViewset(viewsets.ModelViewSet):
+class ImageModelViewset(viewsets.ReadOnlyModelViewSet):
     """
     A viewset for viewing and editing user instances.
     """
-    # TODO: Need to return the project id then post the images when the project id in the json so to save the foreign key
     serializer_class = ProjectSerializer
     queryset = Project.objects.all()
