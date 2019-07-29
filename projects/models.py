@@ -11,6 +11,7 @@ PROJECT_TYPES = (
     (TEACHING, 'Teaching'),
 )
 
+
 # Create your models here.
 class Project(models.Model):
     title = models.CharField(max_length=256)
