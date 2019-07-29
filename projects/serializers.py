@@ -1,20 +1,19 @@
+from typing import Dict
+
 from rest_framework import serializers
 
-from projects.models import Project
+from projects.models import Project, Image
 
 
 class ProjectSerializer(serializers.ModelSerializer):
-    thumbnail = serializers.FileField()
-    banner = serializers.FileField()
-    video = serializers.FileField()
-
+    # TODO: Add image relation field to get image set for a project
     class Meta:
         model = Project
         fields = ['title', 'description', 'thumbnail_aws_path', 'banner_aws_path', 'video_aws_path', 'project_type',
                   'date']
 
-    def create(self, validated_data):
-        thumbnail = validated_data.pop('thumbnail')
-        banner = validated_data.pop('banner')
-        video = validated_data.pop('video')
 
+class ImageSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Image
+        fields = ['project', 'picture']
